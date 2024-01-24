@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: url("https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.webp?b=1&s=612x612&w=0&k=20&c=8xbZvMyptEaqMW46diKakhVgkPkAzBi5l7J1yveCZFk=");
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 34px;
+    font-family: Algerian, sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .clock {
+    display: flex;
+    padding-bottom: 60px;
+    
+  }
+  
+  .clock div {
+    margin: 5px;
+    position: relative;
+  }
+  
+  .clock span {
+    width: 100px;
+    height: 90px;
+    border-radius: 70%;
+    background: rgb(13, 172, 187);
+    font-family: Algerian;
+    opacity: 0.9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .clock span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes pulsate {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .clock .text {
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgb(21, 21, 186);
+    opacity: 0.8;
+  }
+  
+  .clock #ampm {
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: rgb(1, 6, 110);
+  }
